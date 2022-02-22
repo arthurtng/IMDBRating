@@ -1,5 +1,7 @@
 package edu.bristol;
 
+import java.text.DecimalFormat;
+
 public class IMDBRating
 {
     private float currentAverage = 0;
@@ -7,10 +9,13 @@ public class IMDBRating
 
     public float addNewRating(int newRating)
     {
-        int previousTotal = (int) (currentAverage * ratingCount);
-        int newTotal = previousTotal + newRating;
+        float previousTotal = (currentAverage * ratingCount);
+        float newTotal = previousTotal + newRating;
         ratingCount++;
         currentAverage = newTotal / ratingCount;
+        currentAverage = currentAverage * 10;
+        int temp = (int) currentAverage;
+        currentAverage = (float) temp / 10;
         return currentAverage;
     }
 }
