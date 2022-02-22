@@ -24,7 +24,7 @@ public class IMDBRatingTest
         assertTrue(averageRating*10 == 42, "Adding 3rd rating: average should be 4.2");
 
         // Test should fail
-        averageRating = rater.addNewRating(2);
+        averageRating = rater.addNewRating(1);
         assertTrue(averageRating*10 == 42, "Adding 3rd rating: average should be 4.2");
     }
 }
