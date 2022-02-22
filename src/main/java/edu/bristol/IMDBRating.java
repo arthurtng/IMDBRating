@@ -1,6 +1,5 @@
 package edu.bristol;
 
-import java.text.DecimalFormat;
 
 public class IMDBRating
 {
